@@ -1,0 +1,33 @@
+.filter-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.filterButton {
+  padding: 5px 15px;
+  margin-right: 10px;
+  border: 1px solid #555555;
+  font: inherit;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.filterButton:hover {
+  color: white;
+  background-color: black;
+}
+
+.active {
+  color: white;
+  background-color: black;
+}
