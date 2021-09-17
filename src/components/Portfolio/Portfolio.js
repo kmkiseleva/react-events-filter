@@ -2,7 +2,7 @@ import imgData from "../../img/imgData";
 import { Component } from "react";
 import styles from "./Portfolio.module.css";
 import Toolbar from "../Toolbar/Toolbar";
-// import ProjectList from "./ProjectList";
+import ProjectList from "../ProjectList/ProjectList";
 
 const filters = ["All", "Websites", "Flayers", "Business Cards"];
 const imageData = imgData;
@@ -42,7 +42,7 @@ class Portfolio extends Component {
           selected={this.state.currentFilter}
           onSelectFilter={this.onSelectFilterHandler}
         />
-        {/* <ProjectList images={this.state.filteredImages} /> */}
+        <ProjectList images={this.state.filteredImages} />
       </div>
     );
   }

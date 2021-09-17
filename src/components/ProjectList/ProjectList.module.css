@@ -1,0 +1,16 @@
+.container {
+  height: 1400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.imageContainer {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.imageItem {
+  width: 100%;
+}
