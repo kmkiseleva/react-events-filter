@@ -1,19 +1,18 @@
 import styles from "./Toolbar.module.css";
 import PropTypes from "prop-types";
 
-const Toolbar = (props) => {
-  let classActiveButton = `${styles.filterButton} ${styles.active}`;
+const Toolbar = ({ filters, selected, onSelectFilter }) => {
+  const { filterContainer, filterButton, active } = styles;
+  let classActiveButton = `${filterButton} ${active}`;
   return (
-    <div className={styles.filterContainer}>
-      {props.filters.map((filter) => (
+    <div className={filterContainer}>
+      {filters.map((filter) => (
         <button
           key={Math.random()}
-          className={
-            props.selected === filter ? classActiveButton : styles.filterButton
-          }
+          className={selected === filter ? classActiveButton : filterButton}
           title={filter}
-          selected={props.selected}
-          onClick={props.onSelectFilter}
+          selected={selected}
+          onClick={onSelectFilter}
         >
           {filter}
         </button>
